@@ -150,8 +150,6 @@
 // num = 5
 // console.log(count,show,num)
 
-
-
 // const func = () => {
 //     var x = "hello";
 //   console.log(x);
@@ -164,7 +162,6 @@
 //   func2();
 // };
 
-
 // func();
 
 // const foo = ()=>{
@@ -176,17 +173,188 @@
 //     const foo =()=>{
 //         console.log("im local foo")
 //     }
-    
+
 //     foo()
 // }
 // foo()
 // boo()
 
-let x = 1
+// let x = 1
 
-if (true) { 
-    let x = 10
-    console.log(x) // 10
+// if (true) {
+//     let x = 10
+//     console.log(x) // 10
+// }
+
+// console.log(x) // 1
+
+// var x = "global"
+// console.log(foo)
+
+// var foo = function () {
+//     console.log("x")
+// }
+
+// var Counter = (function () {
+//   var num = 0;
+
+//   return {
+//     increase() {
+//       return ++num;
+//     },
+//     decrease() {
+//       return --num;
+//     },
+//   };
+// })();
+
+// console.log(Counter.increase());
+// console.log(Counter.increase())
+
+// console.log(foo)
+
+// Object 생성자 함수
+
+// const person = new Object
+
+// person.name = "woony"
+// person.age = 26
+
+// console.log(person)
+
+// const str = new String('woony')
+// const str2 = "jenny"
+// const str3 = String("honey")
+// str.name = "mungyerg"
+// console.log(str.name)
+// console.log(typeof str)
+// console.log(typeof str2)
+// console.log(typeof str3)
+
+// const newPerson = new Object();
+// newPerson.name = "woony"
+// newPerson.age = 26
+// newPerson.sayHello = function () {
+//     console.log(`Hi, I'm ${this.name} ${this.age}`)
+// }
+
+// newPerson.sayHello()
+
+// console.log(str2.length)
+
+// const circle1 = {
+//   radius: 5,
+//   getDiameter: function () {
+//     return 2 * this.radius;
+//   }
+// };
+
+// console.log(circle1.getDiameter()); // 10
+
+// function Circle (radius) {
+//   this.radius = radius;
+//   this.getDiameter = function () {
+//     return 2 * this.radius
+//   }
+// }
+
+// const circle1 = new Circle(5)
+// const circle2 = new Circle(10)
+
+// console.log(circle1.getDiameter());
+// console.log(circle2.getDiameter());
+
+// const circle3 = Circle(15)
+// console.log(circle3)
+// console.log(radius)
+
+
+// const increase = function (num) {
+//   return ++num
+// }
+// const obj = {increase ,b:2}
+
+// function square(num){
+//   return num*num
+// }
+
+// console.dir(square)
+
+// function sum () {
+//   let res = 0;
+//   console.log(res)
+//   for(let i = 0; i <arguments.length; i++) {
+//       res += arguments[i]
+//   }
+  
+//   return res;
+// }
+
+// console.log(sum())
+// console.log(sum(1,2))
+// console.log(sum(1,2,3))
+// console.log(res)
+
+// const circle = {
+//   radius : 5, // 반지름
+//   getDiameter() {
+//     return 2 * this.radius
+//   },
+  
+//   getArea() {
+//     return Math.PI * this.radius ** 2;
+//   }
+// };
+
+// console.log(circle);
+// console.log(circle.getArea());
+
+// function Circle (radius) {
+
+//   this.radius = radius;
+//   this.Area = function () {
+//     return Math.PI * this.radius ** 2
+//   }
+// }
+
+// Circle.prototype.getArea = function () {
+//   return Math.PI * this.radius ** 2;
+// };  
+
+// const circle1 = new Circle(5) //반지름이 5인 인스턴스 생성
+// const circle2 = new Circle(10) //반지름이 10인 인스턴스 생성
+
+// // Circle 생성자 함수가 생성한 모든 인스턴스는 부모 객체의 역할을 하는
+// // 프로토타입 Cricle.prototype으로부터 getArea 메서드를 상속받는다.
+// // 즉, Circle 생성자 함수가 생성하는 모든 인스턴스는 하나의 getArea 메서드를 공유한다.
+
+// console.log(circle1.getArea === circle2.getArea); //true 
+// //이제는 같은 메서드를 공유한다.
+
+// console.log(circle1.Area()); 
+// console.log(circle2.Area());
+
+// console.log(x)
+// console.log(y)
+
+// function foo () {
+//   // console.log(x)
+//   console.log(y)
+//   var y = 20
+//   x = 10
+// }
+
+// foo()
+
+// console.log(x)
+// // console.log(y)
+console.log(x)
+var x = 'global';
+
+function foo () {
+    console.log(x); // ? => undefined
+    var x = 'local'
 }
 
-console.log(x) // 1
+foo();
+console.log(x); // global
