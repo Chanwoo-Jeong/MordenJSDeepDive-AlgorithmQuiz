@@ -348,13 +348,44 @@
 
 // console.log(x)
 // // console.log(y)
-console.log(x)
-var x = 'global';
+// console.log(x)
+// var x = 'global';
 
-function foo () {
-    console.log(x); // ? => undefined
-    var x = 'local'
-}
+// function foo () {
+//     console.log(x); // ? => undefined
+//     var x = 'local'
+// }
 
-foo();
-console.log(x); // global
+// foo();
+// console.log(x); // global
+
+// const arr = []
+// const fast = {}
+// const slow = {}
+
+// arr.push(fast)
+// arr.push(slow)
+
+// slow["name"] = "chanWoo"
+// fast["name"] = "munkyeong"
+
+// console.log(arr)
+
+// javascript 구조분해 할당 공부하기
+// const userid = "happy"
+// const age = 26 
+// const live = "동작구 상도동"
+// const sex = "men"
+
+// const obj = {userid:"kricnt" , age:20 , live:"동작구" , sex:"남자"}
+// console.log(obj)
+
+// const { userid ,age ,live ,sex } = obj
+// console.log(userid,age,live,sex)
+
+//중첩되었을 경우 중첩된 위치까지의 구조를 똑같이 그려줘야한다
+const obj2 = {params : {userid2 : "krict"}}
+const { params:{userid2} } =obj2
+
+console.log(userid2)
+
