@@ -93,11 +93,21 @@
         </form>
 
         <h5>7.onclick에서 익명함수와 그냥 함수의 차이.</h5>
-        <button>onclick="함수이름"</button>
-        <button>onclick="()=>함수이름"</button>
+        <button id="me" onclick="show">onclick="함수이름"</button>
+        <button id="metoo" onclick="showing('live')">onclick="()=>함수이름"</button>
     </div>
 
     <script>
+
+        const me = document.getElementById("me")
+        const metoo = document.getElementById("metoo")
+
+        const show = () => {
+            console.log("show me")
+        }
+        const showing = (item) => {
+            console.log(`showing ${item}`)
+        }
 
         // id = send 버튼을 누르면 input의 값을 가져온다 
         const sendButton = document.getElementById("send")
