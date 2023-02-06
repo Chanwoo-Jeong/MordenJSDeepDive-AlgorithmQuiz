@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <button onclick="Show()">show</button>
+    <button id="jeong" onclick="aldfjaldf()">jeong</button>
+    <button id="kim" onclick="help()">kim</button>
+    <ul id="문경">
+
+        <input id="name" placeholder="이름 적어" />
+        <input id="age" placeholder="나이 적어" />
+        <button >제출</button>
+
+    </ul>
 </body>
 
 <script>
-    const Show = () =>{
-        console.log("show")
+    const aldfjaldf = () => {
+        console.log("Hi im jeong")
     }
+
+    const arr1 = ["문경", "25", "30"]
+    console.log(arr1[2]) // 콘솔창에 "문경" 이라고 출력됩니다.
+
+    const arr2 = ["문경", "25"]
+    console.log(arr2[1]) // 콘솔창에 "문경" 이라고 출력됩니다.
+
+    // quiz 25 를 출력하세요
+
+
+    // const result = { result: ["정찬우", "김문경"] }
+
+    // for (i = 0; i < result.result.length; i++) {
+    //     const ul = document.querySelector("ul")
+    //     const li = document.createElement("li")
+    //     li.innerHTML = result.result[i]
+    //     ul.append(li)
+    // }
+
+    const name = document.querySelector("#name").value
+    const age = document.querySelector("#age").value
+
+    const userdata = { "name": name, "age": age }
+
+    const request = axios("/regist", userdata)
+
+
+
 </script>
+
 </html>
