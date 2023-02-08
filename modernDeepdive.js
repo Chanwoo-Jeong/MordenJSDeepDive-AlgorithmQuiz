@@ -389,3 +389,9 @@ const { params:{userid2} } =obj2
 
 console.log(userid2)
 
+var text = "hell0"
+var text2 = "hell to me"
+
+var result = text2.includes(text)
+console.log(result)
+
