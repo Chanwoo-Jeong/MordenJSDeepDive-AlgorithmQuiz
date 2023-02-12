@@ -396,4 +396,26 @@
 // console.log(result)
 
 
+//중괄호와 return의 관계
 
+// const validator = (value) => value < 5
+// console.log(validator(3)) // true 값 출력
+
+// 1. 로직을 중괄호로 감싸주면 "return"을 써준다.
+
+const add = (x, y) => {
+    return x + y;
+}
+  
+  // 2. 화살표 함수 내부에 return문 밖에 없는 경우에는 return문을 줄일 수 있다.
+  
+  const addV2 = (x, y) => x + y
+  
+  // 3. 2번과 같지만 보기좋게 로직을 소괄호로 감싸줄 수 있다.
+  
+  const addV3 = (x, y) => (x + y)
+  
+  // 4. 매개변수가 한 개라면 매개변수를 소괄호로 묶지 않을 수 있다.
+  
+  const addV4 = x => !x 
+  console.log(addV4(false))
