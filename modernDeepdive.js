@@ -383,11 +383,12 @@
 // const { userid ,age ,live ,sex } = obj
 // console.log(userid,age,live,sex)
 
-//중첩되었을 경우 중첩된 위치까지의 구조를 똑같이 그려줘야한다
-// const obj2 = {params : {userid2 : "krict"}}
-// const { params:{userid2} } =obj2
+// 중첩되었을 경우 중첩된 위치까지의 구조를 똑같이 그려줘야한다
+// 더불어 가장 깊은곳의 내용이 구조분해할당이 된다. 
+const obj2 = {data : {userid2 : "krict"}}
+const { data :{userid2} } =obj2
 
-// console.log(userid2)
+console.log(userid2) // krict
 
 // var text = "hell0"
 // var text2 = "hell to me"
@@ -403,19 +404,19 @@
 
 // 1. 로직을 중괄호로 감싸주면 "return"을 써준다.
 
-const add = (x, y) => {
-    return x + y;
-}
+// const add = (x, y) => {
+//     return x + y;
+// }
   
-  // 2. 화살표 함수 내부에 return문 밖에 없는 경우에는 return문을 줄일 수 있다.
+//   // 2. 화살표 함수 내부에 return문 밖에 없는 경우에는 return문을 줄일 수 있다.
   
-  const addV2 = (x, y) => x + y
+//   const addV2 = (x, y) => x + y
   
-  // 3. 2번과 같지만 보기좋게 로직을 소괄호로 감싸줄 수 있다.
+//   // 3. 2번과 같지만 보기좋게 로직을 소괄호로 감싸줄 수 있다.
   
-  const addV3 = (x, y) => (x + y)
+//   const addV3 = (x, y) => (x + y)
   
-  // 4. 매개변수가 한 개라면 매개변수를 소괄호로 묶지 않을 수 있다.
+//   // 4. 매개변수가 한 개라면 매개변수를 소괄호로 묶지 않을 수 있다.
   
-  const addV4 = x => !x 
-  console.log(addV4(false))
+//   const addV4 = x => !x 
+//   console.log(addV4(false))
