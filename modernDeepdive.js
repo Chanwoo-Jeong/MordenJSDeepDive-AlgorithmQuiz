@@ -384,14 +384,16 @@
 // console.log(userid,age,live,sex)
 
 //중첩되었을 경우 중첩된 위치까지의 구조를 똑같이 그려줘야한다
-const obj2 = {params : {userid2 : "krict"}}
-const { params:{userid2} } =obj2
+// const obj2 = {params : {userid2 : "krict"}}
+// const { params:{userid2} } =obj2
 
-console.log(userid2)
+// console.log(userid2)
 
-var text = "hell0"
-var text2 = "hell to me"
+// var text = "hell0"
+// var text2 = "hell to me"
 
-var result = text2.includes(text)
-console.log(result)
+// var result = text2.includes(text)
+// console.log(result)
+
+
 
