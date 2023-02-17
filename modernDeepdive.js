@@ -385,10 +385,10 @@
 
 // 중첩되었을 경우 중첩된 위치까지의 구조를 똑같이 그려줘야한다
 // 더불어 가장 깊은곳의 내용이 구조분해할당이 된다. 
-const obj2 = {data : {userid2 : "krict"}}
-const { data :{userid2} } =obj2
+// const obj2 = {data : {userid2 : "krict"}}
+// const { data :{userid2} } =obj2
 
-console.log(userid2) // krict
+// console.log(userid2) // krict
 
 // var text = "hell0"
 // var text2 = "hell to me"
@@ -420,3 +420,24 @@ console.log(userid2) // krict
   
 //   const addV4 = x => !x 
 //   console.log(addV4(false))
+
+// //ChatGPT 가 짜준 코드
+// let randomNumbers = [];
+
+// // Loop 5 times to generate 5 random numbers
+// for (let i = 0; i < 5; i++) {
+//   // Generate a random number between 1 and 100
+//   let randomNumber = Math.floor(Math.random() * 100) + 1;
+  
+//   // Add the random number to the array
+//   randomNumbers.push(randomNumber);
+// }
+
+// // Log the array of random numbers to the console
+// console.log(randomNumbers);
+
+const obj = {name : "chanwoo", age : 26 , sex : "man"}
+
+const newObj = {...obj , age : 27}
+
+console.log(newObj)
