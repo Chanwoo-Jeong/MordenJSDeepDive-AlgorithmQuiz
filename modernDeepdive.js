@@ -436,8 +436,14 @@
 // // Log the array of random numbers to the console
 // console.log(randomNumbers);
 
-const obj = {name : "chanwoo", age : 26 , sex : "man"}
+// const obj = {name : "chanwoo", age : 26 , sex : "man"}
 
-const newObj = {...obj , age : 27}
+// const newObj = {...obj , age : 27}
 
-console.log(newObj)
+// console.log(newObj)
+
+const showname = {
+    showname : "woony"
+}
+
+console.log(showname?.showname)
