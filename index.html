@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+            padding: 1rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,9 +21,19 @@
 
         <input id="name" placeholder="이름 적어" />
         <input id="age" placeholder="나이 적어" />
-        <button >제출</button>
+        <button>제출</button>
 
     </ul>
+
+    <div class="one">
+        one
+        <div class="two">
+            two
+            <div class="three">
+                three
+            </div>
+        </div>
+    </div>
 </body>
 
 <script>
@@ -25,11 +41,11 @@
         console.log("Hi im jeong")
     }
 
-    const arr1 = ["문경", "25", "30"]
-    console.log(arr1[2]) // 콘솔창에 "문경" 이라고 출력됩니다.
+    // const arr1 = ["문경", "25", "30"]
+    // console.log(arr1[2]) // 콘솔창에 "문경" 이라고 출력됩니다.
 
-    const arr2 = ["문경", "25"]
-    console.log(arr2[1]) // 콘솔창에 "문경" 이라고 출력됩니다.
+    // const arr2 = ["문경", "25"]
+    // console.log(arr2[1]) // 콘솔창에 "문경" 이라고 출력됩니다.
 
     // quiz 25 를 출력하세요
 
@@ -48,7 +64,28 @@
 
     const userdata = { "name": name, "age": age }
 
-    const request = axios("/regist", userdata)
+    // const request = axios("/regist", userdata)
+
+
+    // 이벤트 버블링 
+    // 어떻게 보면 당연한거다 three를 감싸고 있는 two와 one도 함께 누른 샘이다.
+    function logEvent(event) {
+        console.log(event.currentTarget.className);
+    }
+
+    var divs = document.querySelectorAll('div');
+ 
+    divs.forEach(function (div) {
+        div.addEventListener('click', logEvent);
+        
+    });
+//     divs.forEach(function(div) {
+// 	div.addEventListener('click', logEvent, {
+// 		capture: true // default 값은 false입니다.
+// 	});
+// });
+ 
+
 
 
 
