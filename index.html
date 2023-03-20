@@ -2,14 +2,29 @@
 <html lang="en">
 
 <head>
+    <!-- https://m.blog.naver.com/lux-00/221466770614 -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        div {
             border: 1px solid black;
             padding: 1rem;
+        }
+
+        .notes {
+            width: 500px;
+            height: 500px;
+            background-attachment: local;
+            background-image:
+                linear-gradient(to right, white 10px, transparent 10px),
+                linear-gradient(to left, white 10px, transparent 10px),
+                repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+            line-height: 31px;
+            padding: 8px 10px;
+            resize: none;
+            text-transform: capitalize;
         }
     </style>
 </head>
@@ -34,7 +49,15 @@
             </div>
         </div>
     </div>
+
+    <textarea class="notes" onkeyup="counter(this,1500)" name="contents">
+    </textarea>
+    <div style="text-align: right;">
+        <span id="reCount">0 / 1500</span>
+    </div>
+
 </body>
+
 
 <script>
     const aldfjaldf = () => {
@@ -74,21 +97,31 @@
     }
 
     var divs = document.querySelectorAll('div');
- 
+
     divs.forEach(function (div) {
         div.addEventListener('click', logEvent);
-        
+
     });
-//     divs.forEach(function(div) {
-// 	div.addEventListener('click', logEvent, {
-// 		capture: true // default 값은 false입니다.
-// 	});
-// });
- 
+    //     divs.forEach(function(div) {
+    // 	div.addEventListener('click', logEvent, {
+    // 		capture: true // default 값은 false입니다.
+    // 	});
+    // });
 
 
+    const counter = (text, length) => {
+        var limit = length;
+        var str = text.value.length
+        if (str > limit) {
+            document.getElementById('reCount').innerHTML = "1500자 이상 입력했습니다."
+            text.value = text.value.substring(0, limit)
+            text.focus()
+        }
+        document.getElementById("reCount").innerHTML = text.value.length + "/" + limit
+    }
 
-
+    const att = document.getElementsByClassName("notes")
+    
 </script>
 
 </html>
