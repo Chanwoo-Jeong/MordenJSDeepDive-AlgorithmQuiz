@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+
+    <style>
+
+        html::-webkit-scrollbar {
+            display: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .MainContainer::-webkit-scrollbar {
+            display: none;
+        }
+
+        .Box::-webkit-scrollbar {
+            display: none;
+        }
+
+        .InsideBox::-webkit-scrollbar {
+            display: none;
+        }
+
+        html body {
+            box-sizing: border-box;
+            height: 500px;
+        }
+
+        .MainContainer {
+            border: 5px solid black;
+            /* 내가 보는 화면이 높이가 된다. */
+            /* height: 100vh;  */
+
+            /* 부모요소 높이의 100% => 부모요소의 높이가 있어야 적용이 된다. 그렇지 않으면 없는코드나 다름없음. */
+            /* height: 100%; */
+            
+            /* height: 500px; */
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+            position: relative;
+
+        }
+
+        .Box {
+            /* 내 위 요소가 height가 없는데 100%를 지정했다면 Box내부의 요소가 => 100%가 된다. */
+            
+            height: 100%;
+            border: 5px solid pink;
+            flex: 1;
+            overflow: scroll;
+            box-sizing: border-box;
+            
+        }
+
+        .one {
+            /* 포지션 fixed나 absolute 모두 기존 위치에서 벗어나버린다. */
+            /* position: fixed , absolute; */
+            /* position: fixed; */
+            /* position: absolute;
+            bottom: 0;
+            right: 0; */
+        }
+
+        .InsideBox {
+            border: 5px solid slateblue;
+            height: 500px;
+            box-sizing: border-box;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="MainContainer">
+        <div class="Box Pink one">
+            May<br />
+            May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />
+            May<br />
+            May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />May<br />
+
+        </div>
+        <div class="Box Pink">
+            <div class="InsideBox">d</div>
+            <div class="InsideBox">d</div>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+            sdklfjlaadfadf<br/>
+        </div>
+    </div>
+</body>
+
+</html>
