@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <style>
+        /* html, body{
+            height: 100%;
+            border: 5px solid aqua;
+        } */
+        .TestContainer {
+            width: 100%;
+            height: 100vh;
+            border: 5px black solid;
+            box-sizing: border-box;
+            overflow: scroll;
+            position: fixed;
+        }
+
+        .SampleBox {
+            border: 5px solid blue;
+            box-sizing: border-box;
+            height: 33.333333333333333333333%;
+
+        }
+
+        .second {
+            border: 5px solid springgreen;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .Inside {
+            border: 5px solid slateblue;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        /* .forth{
+            background-color: blanchedalmond;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        } */
+
+        /* .second {
+            height: 10%;
+        } */
+
+        .five {
+            overflow: scroll;         
+            display: flex;
+            flex-direction: column;
+            /* position: fixed; */
+            height: 33.333333333333333333333%;
+
+        }
+        /* 알아낸것 : 아무리 height를 지정해주더라도 내용물이 없다면 height의미가 없다. */
+
+        /* 질문해보자 */
+        /* height 가 1000px이더라도 내용물이 없다면 먹질 않는다. */
+        /* 그런데 또 insidebox는 height가 먹는다 */
+        .Map{
+            /* width: 100%; */
+            height: 1000px;
+            display: flex;
+            flex-direction: row;
+            border: 3px black solid;
+
+        }
+
+        .InsideFive {
+            /* height: 100px; */
+            height: 200px;
+            width: 50%;
+            overflow: scroll;
+            /* height: 200px; */
+            border: 3px orange solid;
+
+        }
+
+        .doubleBox {
+            width: 50%;
+            /* height: 100px; */
+            /* height: 100px; */
+            border: 3px aqua solid;
+            overflow: scroll;
+        }
+        .footer {
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="TestContainer">
+
+        <div class="SampleBox first">SampleBox</div>
+        <!-- <div class="SampleBox second">
+            SampleBox
+            <div class="Inside">InsideBox</div>
+        </div>
+        <div class="SampleBox third">SampleBox</div>
+        <div class="SampleBox forth">SampleBox</div> -->
+        <div class=" five">
+            <div class="Map">
+                <div class="InsideFive">
+                    <!-- 내가 박스
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br />
+                    SampleBox<br /> -->
+                </div>
+                <div class="doubleBox">
+                    <!-- doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br />
+                    doubleBox<br /> -->
+                </div>
+            </div>
+            <div class="footer">
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+                footer<br />
+            </div>
+        </div>
+
+        <div class="SampleBox six">SampleBox</div>
+
+    </div>
+
+</body>
+
+</html>
