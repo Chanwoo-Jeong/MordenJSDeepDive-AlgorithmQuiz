@@ -14,6 +14,7 @@
 
     <script>
 
+        //배열속 배열 메소드
         const Arr = [["apple", "banana", "kiwi"], ["tiger", "rabbit"], ["sopt"]]
         const NewArr = Arr.map((item) => {
             return item.map((item) => {
@@ -22,6 +23,19 @@
             })
         })
         console.log(NewArr)
+
+
+        //객체 속 배열 메소드
+        const Obj = {
+            "1반": [{ name: "woony", age: "26", sex: "man" }, { name: "liba", age: "52", sex: "women" }, { name: "kelly", age: "31", sex: "women" }],
+            "2반": [{ name: "bicker", age: "15", sex: "man" }, { name: "bori", age: "24", sex: "man" }, { name: "roli", age: "22", sex: "women" }],
+            "3반": [{ name: "calli", age: "62", sex: "women" }, { name: "yoni", age: "32", sex: "man" }, { name: "woori", age: "16", sex: "man" }]
+        }
+
+        const ManObj = Object.keys(Obj).map((key)=>Obj[key].filter((person)=>person.sex === "man"))
+        const WomanObj = Object.keys(Obj).map((key)=>Obj[key].filter((person)=>person.sex === "women"))
+        console.log(ManObj)
+        console.log(WomanObj)
     </script>
 </body>
 
