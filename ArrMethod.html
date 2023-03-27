@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrMethod</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const Arr = [["apple", "banana", "kiwi"], ["tiger", "rabbit"], ["sopt"]]
+        const NewArr = Arr.map((item) => {
+            return item.map((item) => {
+                console.log(`<div>${item}<div>`)
+                return `<div>${item}<div>`
+            })
+        })
+        console.log(NewArr)
+    </script>
+</body>
+
+</html>
